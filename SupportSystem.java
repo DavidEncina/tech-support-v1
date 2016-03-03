@@ -15,7 +15,7 @@ public class SupportSystem
 {
     private InputReader reader;
     private Responder responder;
-    
+
     /**
      * Creates a technical support system.
      */
@@ -33,13 +33,10 @@ public class SupportSystem
     public void start()
     {
         boolean finished = false;
-
         printWelcome();
-
         while(!finished) {
             String input = reader.getInput();
-
-            if(input.contains("bye")) {
+            if(input.trim().equalsIgnoreCase("bye")) {
                 finished = true;
             }
             else {
