@@ -38,9 +38,9 @@ public class SupportSystem
             String input = reader.getInput();
             if(input.trim().equalsIgnoreCase("bye")) {
                 finished = true;
-            }
+            }                       
             else {
-                String response = responder.generateResponse();
+                String response = responder.generateResponse(input);
                 System.out.println(response);
             }
         }
