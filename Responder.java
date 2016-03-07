@@ -43,10 +43,8 @@ public class Responder
     public String generateResponse(String palabra)
     {
         String respuesta = null;
-        if (listaRespuestaConcreta.containsKey(palabra)) {
-            respuesta = listaRespuestaConcreta.get(palabra);
-        }
-        else if (respuesta == null) {
+        respuesta = listaRespuestaConcreta.get(palabra);    
+        if (respuesta == null) {
             respuesta = lista.get(alAzar.nextInt(lista.size()));
         }
         return respuesta;
